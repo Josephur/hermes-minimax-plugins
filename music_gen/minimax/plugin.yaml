@@ -1,7 +1,8 @@
-name: minimax
+name: minimax-music
 version: 1.0.0
 description: MiniMax Music Generation backend for Hermes Agent
 owner: Josephur
 kind: backend
 requires_env:
   - MINIMAX_API_KEY
+

@@ -8,7 +8,7 @@ Music Generation is not yet a stock Hermes category. Until upstream Hermes ships
 
 ```bash
 hermes plugins install owner/hermes-minimax-plugins/music_gen/minimax --enable
-hermes plugins enable music_gen/minimax --no-allow-tool-override
+hermes plugins enable minimax-music --no-allow-tool-override
 ```
 
 Then configure:
@@ -40,3 +40,4 @@ Generate an instrumental lo-fi hip-hop track with warm vinyl texture and soft pi
 ```
 
 The tool returns `MEDIA:<local_path>` for the downloaded MP3.
+
