@@ -1,8 +1,16 @@
 # HERMES-MUSIC-GEN-PATCH-BEGIN tools_config
 # Add CONFIGURABLE_TOOLSETS row:
-# ("music_gen", "Music Generation", "music_generate"),
+# ("music_gen", "🎵 Music Generation", "music_generate"),
 # Add "music_gen" to _DEFAULT_OFF_TOOLSETS.
+# Add TOOL_CATEGORIES["music_gen"] = {"name": "Music Generation", "icon": "🎵", "providers": []}.
 # Add _plugin_music_gen_providers() mirroring _plugin_video_gen_providers(), using agent.music_gen_registry.list_providers().
 # In _visible_providers(), extend Music Generation rows with _plugin_music_gen_providers().
-# Add selection glue that writes music_gen.provider and music_gen.model.
+# Add a music_gen branch to the needs-configuration prompt, like video_gen.
+# Add _select_plugin_music_gen_provider(plugin_name, config):
+#   - force plugin discovery
+#   - write music_gen.provider
+#   - list provider.list_models()
+#   - prompt the user to choose a model with _prompt_choice
+#   - write music_gen.model
+# Add music_gen_plugin_name branches wherever image_gen_plugin_name/video_gen_plugin_name are handled.
 # HERMES-MUSIC-GEN-PATCH-END tools_config

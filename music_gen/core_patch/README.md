@@ -28,3 +28,8 @@ Then apply the snippets:
 - `hermes_cli/tools_config.py.snippet`
 
 Restart Hermes after patching.
+
+## Model Picker Requirement
+
+The Music Generation provider picker must prompt for music_gen.model after API-key setup. MiniMax exposes music-2.6, music-2.6-free, music-cover, and music-cover-free; the local Hermes patch now mirrors video_gen provider selection but adds this model prompt for music providers.
+
