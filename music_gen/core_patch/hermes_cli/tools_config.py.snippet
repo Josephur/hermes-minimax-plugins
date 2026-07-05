@@ -1,0 +1,8 @@
+# HERMES-MUSIC-GEN-PATCH-BEGIN tools_config
+# Add CONFIGURABLE_TOOLSETS row:
+# ("music_gen", "Music Generation", "music_generate"),
+# Add "music_gen" to _DEFAULT_OFF_TOOLSETS.
+# Add _plugin_music_gen_providers() mirroring _plugin_video_gen_providers(), using agent.music_gen_registry.list_providers().
+# In _visible_providers(), extend Music Generation rows with _plugin_music_gen_providers().
+# Add selection glue that writes music_gen.provider and music_gen.model.
+# HERMES-MUSIC-GEN-PATCH-END tools_config

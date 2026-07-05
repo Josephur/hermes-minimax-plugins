@@ -9,6 +9,7 @@ Available plugins:
 ```text
 image_gen/
 tts/
+music_gen/
 ```
 
 The image generation plugin registers the Hermes image generation provider named `minimax`.
@@ -37,3 +38,5 @@ hermes config set tts.voice English_Graceful_Lady
 The plugins require `MINIMAX_API_KEY`. Keep credentials in Hermes `.env`; keep behavior settings in Hermes `config.yaml` via `hermes config set`.
 
 Keep instructions cross-platform. Avoid absolute Windows-only or Linux-only paths except where documenting manual fallback installation.
+
+music_gen/ contains the MiniMax Music Generation backend plus a temporary core_patch/ for Hermes installs that do not yet ship the music_gen category. Apply the core patch before installing music_gen/minimax.

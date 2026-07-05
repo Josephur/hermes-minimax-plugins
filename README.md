@@ -7,6 +7,7 @@ This repository is organized by plugin category. The current plugins are:
 ```text
 image_gen/
 tts/
+music_gen/
 ```
 
 `image_gen` adds MiniMax `image-01` support to Hermes image generation without modifying Hermes Agent source code.
@@ -82,3 +83,7 @@ hermes-minimax-plugins/
 ```
 
 Future MiniMax plugins should be added as sibling folders at the repository root.
+
+## Music Generation
+
+Music generation lives under `music_gen/`. It currently requires the temporary core patch in `music_gen/core_patch/` before installing `music_gen/minimax`.
