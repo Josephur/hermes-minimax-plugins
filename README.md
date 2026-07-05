@@ -45,6 +45,7 @@ Use the plugin subdirectory when installing from GitHub:
 
 ```bash
 hermes plugins install owner/hermes-minimax-plugins/tts --enable
+hermes plugins enable minimax-tts
 ```
 
 Replace `owner` with the GitHub account or organization that hosts this repository.
@@ -54,7 +55,7 @@ After install, select MiniMax as the text-to-speech provider:
 ```bash
 hermes config set tts.provider minimax-tts
 hermes config set tts.model speech-2.8-hd
-hermes config set tts.voice English_expressive_narrator
+hermes config set tts.voice English_Graceful_Lady
 hermes config set tts.output_format mp3
 ```
 

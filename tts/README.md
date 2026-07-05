@@ -10,6 +10,7 @@ From GitHub:
 
 ```bash
 hermes plugins install owner/hermes-minimax-plugins/tts --enable
+hermes plugins enable minimax-tts
 ```
 
 Replace `owner` with the GitHub account or organization that hosts this repository.
@@ -19,7 +20,7 @@ Then select the provider:
 ```bash
 hermes config set tts.provider minimax-tts
 hermes config set tts.model speech-2.8-hd
-hermes config set tts.voice English_expressive_narrator
+hermes config set tts.voice English_Graceful_Lady
 hermes config set tts.output_format mp3
 ```
 
@@ -37,7 +38,7 @@ You can keep provider-specific settings in `config.yaml`:
 tts:
   provider: minimax-tts
   model: speech-2.8-hd
-  voice: English_expressive_narrator
+  voice: English_Graceful_Lady
   output_format: mp3
   minimax_tts:
     speed: 1.0
@@ -50,7 +51,7 @@ Environment overrides are also supported:
 
 ```text
 MINIMAX_TTS_MODEL=speech-2.8-hd
-MINIMAX_TTS_VOICE_ID=English_expressive_narrator
+MINIMAX_TTS_VOICE_ID=English_Graceful_Lady
 MINIMAX_TTS_BASE_URL=https://api.minimax.io/v1/t2a_v2
 MINIMAX_GROUP_ID=...
 ```

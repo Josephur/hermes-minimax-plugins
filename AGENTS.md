@@ -20,6 +20,7 @@ Install command shape:
 ```bash
 hermes plugins install owner/hermes-minimax-plugins/image_gen --enable
 hermes plugins install owner/hermes-minimax-plugins/tts --enable
+hermes plugins enable minimax-tts
 ```
 
 After installation, users should select the providers with:
@@ -30,7 +31,7 @@ hermes config set image_gen.model image-01
 hermes config set image_gen.use_gateway false
 hermes config set tts.provider minimax-tts
 hermes config set tts.model speech-2.8-hd
-hermes config set tts.voice English_expressive_narrator
+hermes config set tts.voice English_Graceful_Lady
 ```
 
 The plugins require `MINIMAX_API_KEY`. Keep credentials in Hermes `.env`; keep behavior settings in Hermes `config.yaml` via `hermes config set`.

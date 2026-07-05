@@ -19,7 +19,7 @@ from agent.tts_provider import TTSProvider
 DEFAULT_BASE_URL = "https://api.minimax.io/v1/t2a_v2"
 DEFAULT_WS_URL = "wss://api.minimax.io/ws/v1/t2a_v2"
 DEFAULT_MODEL = "speech-2.8-hd"
-DEFAULT_VOICE_ID = "English_expressive_narrator"
+DEFAULT_VOICE_ID = "English_Graceful_Lady"
 DEFAULT_SAMPLE_RATE = 32000
 DEFAULT_BITRATE = 128000
 SUPPORTED_FILE_FORMATS = {"mp3", "wav", "flac", "pcm"}
@@ -199,7 +199,6 @@ class MiniMaxTTSProvider(TTSProvider):
 
     def list_voices(self) -> List[Dict[str, Any]]:
         return [
-            {"id": "English_expressive_narrator", "display": "English Expressive Narrator", "language": "en"},
             {"id": "English_Graceful_Lady", "display": "English Graceful Lady", "language": "en"},
             {"id": "English_Trustworth_Man", "display": "English Trustworthy Man", "language": "en"},
             {"id": "English_CalmWoman", "display": "English Calm Woman", "language": "en"},
