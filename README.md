@@ -45,7 +45,7 @@ Use the plugin subdirectory when installing from GitHub:
 
 ```bash
 hermes plugins install owner/hermes-minimax-plugins/tts --enable
-hermes plugins enable minimax-tts
+hermes plugins enable minimax-tts --no-allow-tool-override
 ```
 
 Replace `owner` with the GitHub account or organization that hosts this repository.

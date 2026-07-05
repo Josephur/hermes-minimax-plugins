@@ -20,7 +20,7 @@ Install command shape:
 ```bash
 hermes plugins install owner/hermes-minimax-plugins/image_gen --enable
 hermes plugins install owner/hermes-minimax-plugins/tts --enable
-hermes plugins enable minimax-tts
+hermes plugins enable minimax-tts --no-allow-tool-override
 ```
 
 After installation, users should select the providers with:
