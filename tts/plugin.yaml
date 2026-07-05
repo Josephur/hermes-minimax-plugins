@@ -1,0 +1,7 @@
+name: minimax-tts
+version: 1.0.0
+description: MiniMax text-to-speech provider for Hermes Agent
+author: Josephur
+kind: backend
+requires_env:
+  - MINIMAX_API_KEY
