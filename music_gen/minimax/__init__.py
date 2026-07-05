@@ -92,7 +92,7 @@ def _resolve_model(model: Optional[str]) -> str:
 
 def _extract_audio_url(data: Dict[str, Any]) -> Optional[str]:
     stack: List[Any] = [data]
-    keys = {"audio_url", "music_url", "url", "download_url", "file_url"}
+    keys = {"audio", "audio_url", "music_url", "url", "download_url", "file_url"}
     while stack:
         cur = stack.pop()
         if isinstance(cur, dict):
@@ -230,9 +230,9 @@ class MinimaxMusicGenProvider(MusicGenProvider):
             prompt=prompt,
             lyrics=lyrics,
             provider=self.name,
-            duration_seconds=int(duration_seconds or 0),
-            sample_rate=sample_rate,
-            bitrate=bitrate,
+            duration_seconds=int(((data.get("extra_info") or {}).get("music_duration") or 0) / 1000) or int(duration_seconds or 0),
+            sample_rate=int((data.get("extra_info") or {}).get("music_sample_rate") or sample_rate),
+            bitrate=int((data.get("extra_info") or {}).get("bitrate") or bitrate),
             extra={"local_path": str(local), "source_url": audio_url, "size_bytes": local.stat().st_size, "is_cover": is_cover},
         )
 
